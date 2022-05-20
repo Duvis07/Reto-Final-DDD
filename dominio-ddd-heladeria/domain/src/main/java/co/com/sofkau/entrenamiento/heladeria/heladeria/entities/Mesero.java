@@ -19,8 +19,8 @@ public class Mesero extends Entity<IdMesero> {
 
     protected Sexo sexo;
 
-    public Mesero(IdMesero entityId, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo) {
-        super(entityId);
+    public Mesero(IdMesero idMesero, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo) {
+        super(idMesero);
         this.nombre = nombre;
         this.telefono = telefono;
         this.edad = edad;

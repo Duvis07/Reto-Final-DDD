@@ -45,16 +45,16 @@ public class AsignarAdminUseCaseTest {
         //Arrange
         var command = new AsignarAdmin(
                 new IdAdministrador("1"),
-                IdHeladeria.of("22"),
+                IdHeladeria.of("21"),
                 new Nombre("Mario"),
                 new Telefono(311459),
                 new Correo("mario@gmail.com"));
-        when(repository.getEventsBy("41")).thenReturn(events());
+        when(repository.getEventsBy("21")).thenReturn(events());
 
         //Act
         var response = UseCaseHandler
                 .getInstance()
-                .setIdentifyExecutor("22")
+                .setIdentifyExecutor("21")
                 .syncExecutor(asignarAdminUseCase, new RequestCommand<>(command))
                 .orElseThrow();
         var events = response.getDomainEvents();
@@ -63,13 +63,13 @@ public class AsignarAdminUseCaseTest {
         AdminAsignado adminAsignado = (AdminAsignado) events.get(0);
         Assertions.assertEquals("1", adminAsignado.IdAdministrador().value());
         Assertions.assertEquals("Mario", adminAsignado.Nombre().value());
-        Assertions.assertEquals((3114593), adminAsignado.Telefono().value());
+        Assertions.assertEquals(311459, adminAsignado.Telefono().value());
         Assertions.assertEquals("mario@gmail.com", adminAsignado.Correo().value());
 
     }
     private List<DomainEvent> events(){
         return List.of(new HeladeriaCreada(
-                IdHeladeria.of("21"),
+                IdHeladeria.of("41"),
                 new Nombre("Rincon de las delicias"),
                 new Telefono(3114593),
                 new Ubicacion("Medellin")

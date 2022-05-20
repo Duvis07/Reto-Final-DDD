@@ -16,8 +16,8 @@ public class Proveedor extends Entity<IdProveedor> {
 
     protected Correo correo;
 
-    public Proveedor(IdProveedor entityId, Nombre nombre, Telefono telefono, Correo correo) {
-        super(entityId);
+    public Proveedor(IdProveedor idProveedor, Nombre nombre, Telefono telefono, Correo correo) {
+        super(idProveedor);
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;

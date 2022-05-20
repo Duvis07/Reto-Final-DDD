@@ -14,8 +14,8 @@ public class Administrador extends Entity<IdAdministrador> {
     protected Telefono telefono;
     protected Correo correo;
 
-    public Administrador(IdAdministrador entityId, Nombre nombre, Telefono telefono, Correo correo) {
-        super(entityId);
+    public Administrador(IdAdministrador idAdministrador, Nombre nombre, Telefono telefono, Correo correo) {
+        super(idAdministrador);
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
