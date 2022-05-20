@@ -22,12 +22,13 @@ public class Envio extends AggregateEvent<IdEnvio> {
     protected  Factura factura;
 
 
-    public Envio(IdEnvio entityId, IdEmisario idEmisario, IdRuta idRuta, IdVehiculo idVehiculo, Nombre nombre) {
+    public Envio(IdEnvio entityId, IdEmisario idEmisario, IdRuta idRuta, IdVehiculo idVehiculo, Nombre nombre,Factura factura) {
         super(entityId);
         this.idEmisario = idEmisario;
         this.idRuta = idRuta;
         this.idVehiculo = idVehiculo;
         this.nombre = nombre;
+        this.factura = factura;
     }
 
     public IdEmisario IdEmisario() {
@@ -40,6 +41,10 @@ public class Envio extends AggregateEvent<IdEnvio> {
 
     public IdVehiculo IdVehiculo() {
         return idVehiculo;
+    }
+
+    public Factura Factura() {
+        return factura;
     }
 
     public Nombre Nombre() {

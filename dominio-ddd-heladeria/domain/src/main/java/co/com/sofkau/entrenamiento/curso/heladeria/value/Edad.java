@@ -19,8 +19,8 @@ public class Edad implements ValueObject<Integer> {
             throw new IllegalArgumentException("La edad no puede estar en blanco");
         }
 
-        if (this.edad.longValue() > 150) {
-            throw new IllegalArgumentException("La edad no permite mas de 150 caracteres");
+        if (this.edad.longValue() > 3) {
+            throw new IllegalArgumentException("La edad no permite mas de 3 caracteres");
         }
     }
 

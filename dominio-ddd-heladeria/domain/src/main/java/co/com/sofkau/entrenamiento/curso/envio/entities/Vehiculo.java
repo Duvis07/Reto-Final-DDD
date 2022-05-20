@@ -11,11 +11,11 @@ import co.com.sofkau.entrenamiento.curso.envio.values.Tipo;
 
 public class Vehiculo extends Entity<IdVehiculo> {
 
-    private Marca marca;
+   protected Marca marca;
 
-    private Modelo modelo;
+  protected Modelo modelo;
 
-    private Tipo tipo;
+ protected Tipo tipo;
 
     public Vehiculo(IdVehiculo entityId, Marca marca, Modelo modelo, Tipo tipo) {
         super(entityId);

@@ -1,6 +1,7 @@
 package co.com.sofkau.entrenamiento.curso.envio.values;
 
 import co.com.sofka.domain.generic.ValueObject;
+import co.com.sofkau.entrenamiento.curso.pedido.values.Descripcion;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

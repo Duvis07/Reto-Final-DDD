@@ -8,10 +8,10 @@ import co.com.sofkau.entrenamiento.curso.envio.values.Telefono;
 
 public class Emisario extends Entity<IdEmisario> {
 
-    private Nombre nombre;
-    private Telefono telefono;
+    protected  Nombre nombre;
+   protected Telefono telefono;
 
-    private Correo correo;
+    protected  Correo correo;
 
 
     public Emisario(IdEmisario entityId, Nombre nombre, Telefono telefono, Correo correo) {

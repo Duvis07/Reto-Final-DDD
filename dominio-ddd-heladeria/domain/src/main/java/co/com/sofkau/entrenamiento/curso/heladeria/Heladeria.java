@@ -57,4 +57,21 @@ public class Heladeria extends AggregateEvent<IdHeladeria> {
         return ubicacion;
     }
 
+
+    public void cambiarMesero(){
+
+    }
+
+    public void cambiarAdmin(){
+
+    }
+
+    public void asignarProveedor(){
+
+    }
+
+    public void cambiarNombreHeladeria(){
+
+    }
+
 }

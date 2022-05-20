@@ -8,9 +8,9 @@ import co.com.sofkau.entrenamiento.curso.heladeria.identities.IdAdministrador;
 
 
 public class Administrador extends Entity<IdAdministrador> {
-    private Nombre nombre;
-    private Telefono telefono;
-    private Correo correo;
+    protected Nombre nombre;
+    protected Telefono telefono;
+    protected Correo correo;
 
     public Administrador(IdAdministrador entityId, Nombre nombre, Telefono telefono, Correo correo) {
         super(entityId);

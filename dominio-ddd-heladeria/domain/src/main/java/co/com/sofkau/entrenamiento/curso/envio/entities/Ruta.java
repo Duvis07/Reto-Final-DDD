@@ -9,9 +9,10 @@ import co.com.sofkau.entrenamiento.curso.envio.values.Nombre;
 
 public class Ruta extends Entity<IdRuta> {
 
-    private Direccion direccion;
-    private Nombre nombre;
-    private Ciudad ciudad;
+    protected Direccion direccion;
+
+    protected  Nombre nombre;
+    protected Ciudad ciudad;
 
     public Ruta(IdRuta entityId, Direccion direccion, Nombre nombre, Ciudad ciudad) {
         super(entityId);

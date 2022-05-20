@@ -1,7 +1,6 @@
 package co.com.sofkau.entrenamiento.curso.heladeria.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.entrenamiento.curso.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.curso.heladeria.identities.IdAdministrador;
 
 public class AdminCambiado extends DomainEvent {

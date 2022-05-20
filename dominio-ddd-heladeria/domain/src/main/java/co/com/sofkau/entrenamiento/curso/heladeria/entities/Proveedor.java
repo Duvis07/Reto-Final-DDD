@@ -9,9 +9,10 @@ import co.com.sofkau.entrenamiento.curso.heladeria.identities.IdProveedor;
 
 public class Proveedor extends Entity<IdProveedor> {
 
-    private Nombre nombre;
-    private Telefono telefono;
-    private Correo correo;
+     protected  Nombre nombre;
+
+    protected  Telefono telefono;
+    protected  Correo correo;
 
     public Proveedor(IdProveedor entityId, Nombre nombre, Telefono telefono, Correo correo) {
         super(entityId);
@@ -20,9 +21,7 @@ public class Proveedor extends Entity<IdProveedor> {
         this.correo = correo;
     }
 
-    public Proveedor(IdProveedor entityId) {
-        super(entityId);
-    }
+
 
     public void asignarProveedor(){
 

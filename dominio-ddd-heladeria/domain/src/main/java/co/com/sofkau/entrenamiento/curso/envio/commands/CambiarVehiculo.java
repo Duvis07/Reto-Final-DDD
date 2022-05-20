@@ -7,7 +7,6 @@ import co.com.sofkau.entrenamiento.curso.envio.values.*;
 
 public class CambiarVehiculo extends Command {
 
-
     private  final IdVehiculo idVehiculo;
 
     private  final Marca marca;

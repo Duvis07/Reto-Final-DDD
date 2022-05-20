@@ -16,8 +16,8 @@ public class Sexo implements ValueObject<String> {
             throw new IllegalArgumentException("El sexo no puede estar en blanco");
         }
 
-        if (this.sexo.length() > 100) {
-            throw new IllegalArgumentException("El sexo no permite mas de 100  caracteres");
+        if (this.sexo.length() > 12) {
+            throw new IllegalArgumentException("El sexo no permite mas de 12  caracteres");
         }
     }
 

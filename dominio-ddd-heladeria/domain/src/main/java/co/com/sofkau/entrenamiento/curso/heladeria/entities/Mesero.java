@@ -10,12 +10,12 @@ import co.com.sofkau.entrenamiento.curso.heladeria.value.Sexo;
 
 public class Mesero extends Entity<IdMesero> {
 
-    private Nombre nombre;
-    private Telefono telefono;
+    protected Nombre nombre;
+    protected Telefono telefono;
 
-    private Edad edad;
+    protected Edad edad;
 
-    private Sexo sexo;
+    protected Sexo sexo;
 
     public Mesero(IdMesero entityId, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo) {
         super(entityId);
@@ -25,11 +25,9 @@ public class Mesero extends Entity<IdMesero> {
         this.sexo = sexo;
     }
 
-    public Mesero(IdMesero entityId) {
-        super(entityId);
-    }
 
-    public  void addMesero(){
+
+    public void addMesero() {
 
     }
 }
