@@ -1,20 +1,13 @@
-## Análisis del problema: Cuarta Pauta (Implementación)
+## Reto Final
 
-# dominio-ddd-servientrega
+# dominio-ddd-Tienda de Helados
 
- Se crea un pet project  basado  en el servicio de envios de la empresa serviEntrega,  se implemento,  la parte parte estrategica y tactica de dicho dominio
+
 
 ## Link del  diagrama del dominio
-https://app.diagrams.net/#G1lNMCrJet7M07jlhpYzXfuLV8zthqXEjT
+https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
-## Integrantes
-Jhon Stiven Granada Acevedo
-
-Juan Diego Medina Rojas
-
-Luis Felipe Rivas Mina
-
-Duvan Arley  Botero Rivillas
+## Duvan Arley  Botero Rivillas
 
 
 
