@@ -10,39 +10,49 @@ import java.util.Objects;
 public class Factura implements ValueObject<String> {
 
 
-    private String descripcion;
+    private String value;
     private LocalDateTime hora;
     private static LocalDate dia;
 
 
-    public Factura(String descripcion, LocalDateTime hora, LocalDate dia) {
-        this.descripcion = descripcion;
+    public Factura(String value, LocalDateTime hora, LocalDate dia) {
+        this.value = value;
         this.hora = hora;
         this.dia = dia;
     }
 
 
     public void Descripcion(String descripcion, LocalDateTime hora, LocalDate dia) {
-        this.descripcion = Objects.requireNonNull(descripcion, "Descripcion Requerida");
+        this.value = Objects.requireNonNull(descripcion, "Factura Requerida");
         this.hora = Objects.requireNonNull(hora);
         this.dia = Objects.requireNonNull(dia);
 
-        if (this.descripcion.isBlank()) {
-            throw new IllegalArgumentException("La descripcion no puede estar en blanco");
+        if (this.value.isBlank()) {
+            throw new IllegalArgumentException("La factura no puede estar en blanco");
         }
 
-        if (this.descripcion.length() > 100) {
-            throw new IllegalArgumentException("La descripcion no permite mas de 100  caracteres");
+        if (this.value.length() > 100) {
+            throw new IllegalArgumentException("La factura no permite mas de 100  caracteres");
         }
     }
 
-    public static Descripcion of(String descripcion) {
-        return new Descripcion(descripcion);
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Factura factura = (Factura) o;
+        return value == factura.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 
     @Override
     public String value() {
-        return descripcion;
+        return value;
     }
 
 }

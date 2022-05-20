@@ -16,8 +16,8 @@ public class Sexo implements ValueObject<String> {
             throw new IllegalArgumentException("El sexo no puede estar en blanco");
         }
 
-        if (this.value.length() > 12) {
-            throw new IllegalArgumentException("El sexo no permite mas de 12  caracteres");
+        if (this.value.length() > 50) {
+            throw new IllegalArgumentException("El sexo no permite mas de 50 caracteres");
         }
     }
 
@@ -26,13 +26,6 @@ public class Sexo implements ValueObject<String> {
     }
 
 
-    public String value() {
-        return value;
-    }
-
-    public String Value() {
-        return value;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -45,6 +38,11 @@ public class Sexo implements ValueObject<String> {
     @Override
     public int hashCode() {
         return Objects.hash(value);
+    }
+
+    @Override
+    public String value() {
+        return value;
     }
 }
 

@@ -6,32 +6,35 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Cantidad implements ValueObject<Integer> {
-    private  final Integer cantidad;
+    private final Integer value;
 
-    public Cantidad(Integer cantidad) {
-        this.cantidad = Objects.requireNonNull(cantidad);
-
-        if (this.cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad no puede estar vacio");
-        }
-
-        if (String.valueOf(this.cantidad).isBlank()) {
-            throw new IllegalArgumentException("La cantidad no puede estar en blanco");
-        }
-
-        if (this.cantidad.longValue() > 5) {
-            throw new IllegalArgumentException("La cantidad no permite mas de 5 caracteres");
-        }
+    public Cantidad(Integer value) {
+        this.value = value;
     }
 
     public static Cantidad of(Integer cantidad) {
         return new Cantidad(cantidad);
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cantidad cantidad = (Cantidad) o;
+        return Objects.equals(value, cantidad.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
     @Override
     public Integer value() {
-        return cantidad;
+        return value;
     }
 }
+
 
 

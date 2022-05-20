@@ -5,15 +5,15 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Direccion implements ValueObject<String> {
-    private final String direccion;
+    private final String value;
 
-    public Direccion(String direccion) {
-            this.direccion = Objects.requireNonNull(direccion);
-            if(this.direccion.isBlank()){
+    public Direccion(String value) {
+            this.value = Objects.requireNonNull(value);
+            if(this.value.isBlank()){
                 throw new IllegalArgumentException("La direccion no puede estar en blanco");
             }
 
-            if(this.direccion.length() > 200){
+            if(this.value.length() > 200){
                 throw new IllegalArgumentException("La direccion no permite mas de 200 caracteres");
             }
         }
@@ -21,8 +21,23 @@ public class Direccion implements ValueObject<String> {
     public static Direccion of(String direccion) {
         return new Direccion(direccion);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Direccion direccion = (Direccion) o;
+        return value == direccion.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
     @Override
     public String value() {
-        return direccion;
+        return value;
     }
+
 }

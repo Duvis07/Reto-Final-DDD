@@ -5,22 +5,19 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Modelo implements ValueObject<Integer> {
-    private final Integer modelo;
+    private final Integer value;
 
-    public Modelo(Integer precioUnitario) {
-        this.modelo = Objects.requireNonNull(precioUnitario);
+    public Modelo(Integer value) {
+        this.value = Objects.requireNonNull(value);
 
-        if (this.modelo <= 0) {
+        if (this.value <= 0) {
             throw new IllegalArgumentException("El modelo no puede estar vacio");
         }
 
-        if (String.valueOf(this.modelo).isBlank()) {
+        if (String.valueOf(this.value).isBlank()) {
             throw new IllegalArgumentException("El modelo no puede estar en blanco");
         }
 
-        if (!this.modelo.equals(this.modelo.intValue())) {
-            throw new IllegalArgumentException(" El  modelo  no puede estar en blanco");
-        }
     }
 
     public static Modelo of(Integer modelo) {
@@ -28,7 +25,22 @@ public class Modelo implements ValueObject<Integer> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Modelo modelo= (Modelo) o;
+        return value == modelo.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
+
+    @Override
     public Integer value() {
-        return modelo;
+        return value;
     }
 }
+

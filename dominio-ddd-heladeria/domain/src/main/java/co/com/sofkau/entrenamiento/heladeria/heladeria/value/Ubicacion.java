@@ -24,13 +24,7 @@ public class Ubicacion implements ValueObject<String> {
         return new Ubicacion(ubicacion);
     }
 
-    public String value() {
-        return value;
-    }
 
-    public String Value() {
-        return value;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -43,6 +37,11 @@ public class Ubicacion implements ValueObject<String> {
     @Override
     public int hashCode() {
         return Objects.hash(value);
+    }
+
+    @Override
+    public String value() {
+        return value;
     }
 }
 

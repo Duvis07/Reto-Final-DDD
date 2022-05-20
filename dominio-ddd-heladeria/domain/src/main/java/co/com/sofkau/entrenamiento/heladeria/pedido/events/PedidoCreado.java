@@ -1,12 +1,12 @@
-package co.com.sofkau.entrenamiento.heladeria.pedido.commands;
+package co.com.sofkau.entrenamiento.heladeria.pedido.events;
 
-import co.com.sofka.domain.generic.Command;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
+import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Cliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 
-public class AsignarPedido  extends Command {
-
+public class PedidoCreado extends DomainEvent {
 
     private final IdPedido idPedido;
 
@@ -14,10 +14,14 @@ public class AsignarPedido  extends Command {
 
     private final Descripcion descripcion;
 
-    public AsignarPedido(IdPedido idPedido, Nombre nombre, Descripcion descripcion) {
+    private final Cliente cliente;
+
+    public PedidoCreado(IdPedido idPedido, Nombre nombre, Descripcion descripcion, Cliente cliente){
+        super("co.com.sofkau.entrenamiento.heladeria.PedidoCreado");
         this.idPedido = idPedido;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.cliente = cliente;
     }
 
     public IdPedido IdPedido() {
@@ -30,5 +34,9 @@ public class AsignarPedido  extends Command {
 
     public Descripcion Descripcion() {
         return descripcion;
+    }
+
+    public Cliente Cliente() {
+        return cliente;
     }
 }

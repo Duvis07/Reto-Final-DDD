@@ -6,16 +6,16 @@ import java.util.Objects;
 
 public class Tipo implements ValueObject<String> {
 
-    private final String tipo;
+    private final String value;
 
     public Tipo(String nombre) {
-        this.tipo = Objects.requireNonNull(nombre, "Tipo Requerido");
+        this.value = Objects.requireNonNull(nombre, "Tipo Requerido");
 
-        if (this.tipo.isBlank()) {
+        if (this.value.isBlank()) {
             throw new IllegalArgumentException("El tipo no puede estar en blanco");
         }
 
-        if (this.tipo.length() > 100) {
+        if (this.value.length() > 100) {
             throw new IllegalArgumentException("El tipo no permite mas de 100  caracteres");
         }
     }
@@ -24,7 +24,20 @@ public class Tipo implements ValueObject<String> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+       Tipo tipo = (Tipo) o;
+        return value == tipo.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
+    @Override
     public String value() {
-        return tipo;
+        return value;
     }
 }

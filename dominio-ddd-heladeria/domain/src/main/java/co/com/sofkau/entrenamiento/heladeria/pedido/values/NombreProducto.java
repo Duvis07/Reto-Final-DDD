@@ -6,28 +6,35 @@ import java.util.Objects;
 
 public class NombreProducto implements ValueObject<String> {
 
-    private final String nombreProducto;
+    private final String value;
 
-    public NombreProducto(String nombreProducto) {
-        this.nombreProducto = Objects.requireNonNull(nombreProducto, "NombreProducto Requerido");
+    public NombreProducto(String value) {
+        this.value = Objects.requireNonNull(value, "NombreProducto Requerido");
 
-        if (this.nombreProducto.isBlank()) {
+        if (this.value.isBlank()) {
             throw new IllegalArgumentException("EL nombreProducto no puede estar en blanco");
         }
 
-        if (this.nombreProducto.length() > 30) {
-            throw new IllegalArgumentException("El nombreProducto no permite mas de 30 caracteres");
+        if (this.value.length() > 100) {
+            throw new IllegalArgumentException("El nombreProducto no permite mas de 100 caracteres");
         }
     }
 
-
-    public static NombreProducto of(String nombreProducto) {
-        return new NombreProducto(nombreProducto);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NombreProducto nombreProducto = (NombreProducto) o;
+        return value == nombreProducto.value;
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
     public String value() {
-        return nombreProducto;
+        return value;
     }
 
 

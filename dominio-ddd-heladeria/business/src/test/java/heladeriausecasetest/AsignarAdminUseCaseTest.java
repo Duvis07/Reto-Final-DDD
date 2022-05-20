@@ -47,7 +47,7 @@ public class AsignarAdminUseCaseTest {
                 new IdAdministrador("1"),
                 IdHeladeria.of("22"),
                 new Nombre("Mario"),
-                new Telefono(311459395),
+                new Telefono(311459),
                 new Correo("mario@gmail.com"));
         when(repository.getEventsBy("41")).thenReturn(events());
 
@@ -63,7 +63,7 @@ public class AsignarAdminUseCaseTest {
         AdminAsignado adminAsignado = (AdminAsignado) events.get(0);
         Assertions.assertEquals("1", adminAsignado.IdAdministrador().value());
         Assertions.assertEquals("Mario", adminAsignado.Nombre().value());
-        Assertions.assertEquals(311459395, adminAsignado.Telefono().value());
+        Assertions.assertEquals((3114593), adminAsignado.Telefono().value());
         Assertions.assertEquals("mario@gmail.com", adminAsignado.Correo().value());
 
     }
@@ -71,7 +71,7 @@ public class AsignarAdminUseCaseTest {
         return List.of(new HeladeriaCreada(
                 IdHeladeria.of("21"),
                 new Nombre("Rincon de las delicias"),
-                new Telefono(314744815),
+                new Telefono(3114593),
                 new Ubicacion("Medellin")
         ));
     }

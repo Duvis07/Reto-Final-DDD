@@ -4,6 +4,10 @@ import co.com.sofka.domain.generic.Identity;
 
 public class IdCliente extends Identity {
 
+    public IdCliente() {
+    }
+
+
     public IdCliente(String id) {
         super(id);
     }

@@ -4,19 +4,23 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdCliente;
+import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 
-public class ClienteActualizado extends DomainEvent {
+public class ClienteAsignado extends DomainEvent {
+
 
     private final IdCliente idCliente;
 
+    private  final  IdPedido idPedido;
     private final Nombre nombre;
 
     private final Telefono telefono;
 
 
-    public ClienteActualizado(IdCliente idCliente, Nombre nombre, Telefono telefono) {
-        super("co.com.sofkau.entrenamiento.curso.ClienteActualizado");
+    public ClienteAsignado(IdCliente idCliente, IdPedido idPedido, Nombre nombre, Telefono telefono) {
+        super("co.com.sofkau.entrenamiento.heladeria.ClienteAsignado");
         this.idCliente = idCliente;
+        this.idPedido = idPedido;
         this.nombre = nombre;
         this.telefono = telefono;
     }
@@ -31,6 +35,10 @@ public class ClienteActualizado extends DomainEvent {
 
     public Telefono Telefono() {
         return telefono;
+    }
+
+    public IdPedido IdPedido() {
+        return idPedido;
     }
 }
 

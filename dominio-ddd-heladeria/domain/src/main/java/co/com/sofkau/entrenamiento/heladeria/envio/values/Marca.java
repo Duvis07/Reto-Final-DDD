@@ -5,16 +5,16 @@ import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
 
 public class Marca implements ValueObject<String> {
-    private final String marca;
+    private final String value;
 
-    public Marca(String marca) {
-        this.marca = Objects.requireNonNull(marca, "Marca Requerida");
+    public Marca(String value) {
+        this.value = Objects.requireNonNull(value, "Marca Requerida");
 
-        if (this.marca.isBlank()) {
+        if (this.value.isBlank()) {
             throw new IllegalArgumentException("La marca no puede estar en blanco");
         }
 
-        if (this.marca.length() > 100) {
+        if (this.value.length() > 100) {
             throw new IllegalArgumentException("La marca no permite mas de 100  caracteres");
         }
     }
@@ -24,8 +24,21 @@ public class Marca implements ValueObject<String> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Marca marca = (Marca) o;
+        return value == marca.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
+    @Override
     public String value() {
-        return marca;
+        return value;
     }
 }
 

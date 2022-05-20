@@ -5,6 +5,9 @@ import co.com.sofka.domain.generic.Identity;
 
 public class IdPedido extends Identity {
 
+    public IdPedido() {
+    }
+
     public IdPedido(String id) {
         super(id);
     }
