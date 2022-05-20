@@ -19,7 +19,9 @@ public class Tipo implements ValueObject<String> {
             throw new IllegalArgumentException("El tipo no permite mas de 100  caracteres");
         }
     }
-
+    public static Tipo of(String tipo) {
+        return new Tipo(tipo);
+    }
 
     @Override
     public String value() {

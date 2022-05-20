@@ -19,6 +19,10 @@ public class Ciudad implements ValueObject<String> {
         }
     }
 
+    public static Ciudad of(String ciudad) {
+        return new Ciudad(ciudad);
+    }
+
     @Override
     public String value() {
         return ciudad;

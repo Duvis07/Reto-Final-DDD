@@ -2,12 +2,6 @@ package co.com.sofkau.entrenamiento.curso.pedido;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.entrenamiento.curso.pedido.events.PaqueteCreado;
-import co.com.sofkau.entrenamiento.curso.pedido.identities.PaqueteID;
-import co.com.sofkau.entrenamiento.curso.pedido.values.Descripcion;
-import co.com.sofkau.entrenamiento.curso.pedido.values.Entrega;
-import co.com.sofkau.entrenamiento.curso.pedido.values.Mensajero;
-import co.com.sofkau.entrenamiento.curso.pedido.values.Nombre;
 
 import java.util.List;
 

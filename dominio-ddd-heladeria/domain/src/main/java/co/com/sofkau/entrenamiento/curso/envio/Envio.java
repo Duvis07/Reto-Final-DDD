@@ -5,6 +5,7 @@ import co.com.sofkau.entrenamiento.curso.envio.identities.IdEmisario;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdRuta;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdVehiculo;
+import co.com.sofkau.entrenamiento.curso.envio.values.Factura;
 import co.com.sofkau.entrenamiento.curso.envio.values.Nombre;
 
 public class Envio extends AggregateEvent<IdEnvio> {
@@ -17,6 +18,8 @@ public class Envio extends AggregateEvent<IdEnvio> {
     protected IdVehiculo idVehiculo;
 
     protected Nombre nombre;
+
+    protected  Factura factura;
 
 
     public Envio(IdEnvio entityId, IdEmisario idEmisario, IdRuta idRuta, IdVehiculo idVehiculo, Nombre nombre) {
@@ -35,7 +38,7 @@ public class Envio extends AggregateEvent<IdEnvio> {
         return idRuta;
     }
 
-    public IdVehiculo dVehiculo() {
+    public IdVehiculo IdVehiculo() {
         return idVehiculo;
     }
 

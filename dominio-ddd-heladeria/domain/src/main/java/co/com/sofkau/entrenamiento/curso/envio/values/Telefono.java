@@ -23,7 +23,9 @@ public class Telefono implements ValueObject<Integer> {
         }
     }
 
-
+    public static Telefono of(Integer telefono) {
+        return new Telefono(telefono);
+    }
     @Override
     public Integer value() {
         return telefono;

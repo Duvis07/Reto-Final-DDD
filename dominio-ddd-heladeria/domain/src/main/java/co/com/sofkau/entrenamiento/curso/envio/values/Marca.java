@@ -19,6 +19,10 @@ public class Marca implements ValueObject<String> {
         }
     }
 
+    public static Marca of(String marca) {
+        return new Marca(marca);
+    }
+
     @Override
     public String value() {
         return marca;

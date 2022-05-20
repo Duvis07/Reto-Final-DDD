@@ -18,6 +18,9 @@ public class Direccion implements ValueObject<String> {
             }
         }
 
+    public static Direccion of(String direccion) {
+        return new Direccion(direccion);
+    }
     @Override
     public String value() {
         return direccion;

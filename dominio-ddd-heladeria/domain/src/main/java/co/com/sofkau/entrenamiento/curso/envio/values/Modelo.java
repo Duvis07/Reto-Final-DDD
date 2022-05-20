@@ -23,6 +23,10 @@ public class Modelo implements ValueObject<Integer> {
         }
     }
 
+    public static Modelo of(Integer modelo) {
+        return new Modelo(modelo);
+    }
+
     @Override
     public Integer value() {
         return modelo;

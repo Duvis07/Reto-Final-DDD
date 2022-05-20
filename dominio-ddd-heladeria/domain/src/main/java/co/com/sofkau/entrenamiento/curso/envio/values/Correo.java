@@ -19,7 +19,9 @@ public class Correo implements ValueObject<String> {
             throw new IllegalArgumentException("La correo no permite mas de 100  caracteres");
         }
     }
-
+    public static Correo of(String correo) {
+        return new Correo(correo);
+    }
     @Override
     public String value() {
         return correo;

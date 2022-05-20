@@ -1,7 +1,6 @@
 package co.com.sofkau.entrenamiento.curso.pedido;
 
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofkau.entrenamiento.curso.pedido.events.PaqueteCreado;
 
 /**
  * PaqueteEventChange es el  encargado de disparar los diferentes eventos de nuestro agregado Paquete
