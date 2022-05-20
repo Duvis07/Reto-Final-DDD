@@ -6,7 +6,6 @@ import co.com.sofkau.entrenamiento.curso.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.curso.pedido.identities.IdCliente;
 
 
-
 public class Cliente extends Entity<IdCliente>  {
 
     protected Nombre nombre;

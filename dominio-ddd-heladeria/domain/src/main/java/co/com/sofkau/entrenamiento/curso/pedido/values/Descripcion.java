@@ -7,7 +7,6 @@ import java.util.Objects;
 
 public class Descripcion implements ValueObject<String> {
 
-
     private final String descripcion;
 
     public Descripcion(String descripcion) {

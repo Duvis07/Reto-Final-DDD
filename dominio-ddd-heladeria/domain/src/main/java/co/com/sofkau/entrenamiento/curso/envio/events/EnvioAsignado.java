@@ -1,13 +1,14 @@
-package co.com.sofkau.entrenamiento.curso.envio.commands;
+package co.com.sofkau.entrenamiento.curso.envio.events;
 
 
-import co.com.sofka.domain.generic.Command;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdEmisario;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.curso.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.curso.envio.values.Nombre;
 
-public class LocalizarEnvio  extends Command {
+public class EnvioAsignado extends DomainEvent {
+
 
 
     private  final Nombre nombre;
@@ -16,8 +17,10 @@ public class LocalizarEnvio  extends Command {
     private  final IdVehiculo idVehiculo;
 
 
-    public LocalizarEnvio(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+    public EnvioAsignado(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+        super("co.com.sofkau.entrenamiento.curso.EnvioAsignado ");
         this.nombre = nombre;
+
         this.idEnvio = idEnvio;
         this.idEmisario = idEmisario;
         this.idVehiculo = idVehiculo;
@@ -39,4 +42,3 @@ public class LocalizarEnvio  extends Command {
         return idVehiculo;
     }
 }
-

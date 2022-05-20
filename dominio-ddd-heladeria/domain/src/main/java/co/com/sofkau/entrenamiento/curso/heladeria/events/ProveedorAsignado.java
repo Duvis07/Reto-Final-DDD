@@ -8,7 +8,7 @@ public class ProveedorAsignado extends DomainEvent {
 
     private final IdProveedor idProveedor;
 
-    public ProveedorAsignado(IdHeladeria idHeladeria, IdProveedor idProveedor) {
+    public ProveedorAsignado( IdProveedor idProveedor) {
         super("co.com.sofkau.entrenamiento.curso.ProveedorAsignado");
 
         this.idProveedor = idProveedor;
