@@ -4,6 +4,7 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Correo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
+import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdProveedor;
 
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class Proveedor extends Entity<IdProveedor> {
 
     protected Correo correo;
 
-    public Proveedor(IdProveedor idProveedor, Nombre nombre, Telefono telefono, Correo correo) {
+    public Proveedor(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Telefono telefono, Correo correo) {
         super(idProveedor);
         this.nombre = nombre;
         this.telefono = telefono;

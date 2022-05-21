@@ -23,7 +23,7 @@ public class HeladeriaEventChange extends EventChange {
         });
 
         apply((ProveedorAsignado event) -> {
-            heladeria.proveedor = new Proveedor(event.IdProveedor(), event.Nombre(), event.Telefono(), event.Correo());
+            heladeria.proveedor = new Proveedor(event.IdProveedor(),event.IdHeladeria(), event.Nombre(), event.Telefono(), event.Correo());
         });
 
         apply((MeseroAñadido event) -> {

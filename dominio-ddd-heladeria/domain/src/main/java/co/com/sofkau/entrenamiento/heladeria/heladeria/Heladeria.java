@@ -67,12 +67,12 @@ public class Heladeria extends AggregateEvent<IdHeladeria> {
         appendChange(new AdminAsignado(idAdministrador,nombre,telefono,correo)).apply();
     }
 
-    public void asignarProveedor(IdProveedor idProveedor, Nombre nombre,Telefono telefono, Correo correo){
+    public void asignarProveedor(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Correo correo,    Telefono telefono){
         Objects.requireNonNull(idProveedor);
+        Objects.requireNonNull(idHeladeria);
         Objects.requireNonNull(nombre);
-        Objects.requireNonNull(telefono);
         Objects.requireNonNull(correo);
-        appendChange(new ProveedorAsignado(idProveedor,nombre,telefono,correo)).apply();
+        appendChange(new ProveedorAsignado(idProveedor, idHeladeria, nombre,correo, telefono)).apply();
     }
 
     public void añadirMesero(IdMesero idMesero, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo){
