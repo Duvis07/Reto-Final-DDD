@@ -7,16 +7,15 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Ciudad;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Direccion;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
-public class RutaAsignada  extends DomainEvent {
+public class RutaAñadida extends DomainEvent {
 
     private final IdRuta idRuta;
     private  final Direccion direccion;
     private  final Ciudad ciudad;
     private  final Nombre nombre;
 
-    public RutaAsignada(IdRuta idRuta, Direccion direccion, Ciudad ciudad, Nombre nombre) {
-        super("co.com.sofkau.entrenamiento.curso.RutaAsignada");
-
+    public RutaAñadida(IdRuta idRuta, Direccion direccion, Ciudad ciudad, Nombre nombre) {
+        super("co.com.sofkau.entrenamiento.heladeria.RutaAñadida");
         this.idRuta = idRuta;
         this.direccion = direccion;
         this.ciudad = ciudad;

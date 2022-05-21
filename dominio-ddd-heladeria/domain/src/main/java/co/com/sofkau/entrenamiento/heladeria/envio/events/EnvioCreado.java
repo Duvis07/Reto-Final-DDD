@@ -7,7 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
-public class EnvioAsignado extends DomainEvent {
+public class EnvioCreado extends DomainEvent {
 
 
 
@@ -17,10 +17,9 @@ public class EnvioAsignado extends DomainEvent {
     private  final IdVehiculo idVehiculo;
 
 
-    public EnvioAsignado(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
-        super("co.com.sofkau.entrenamiento.curso.EnvioAsignado ");
+    public EnvioCreado(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+        super("co.com.sofkau.entrenamiento.heladeria.EnvioCreado");
         this.nombre = nombre;
-
         this.idEnvio = idEnvio;
         this.idEmisario = idEmisario;
         this.idVehiculo = idVehiculo;

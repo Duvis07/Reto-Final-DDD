@@ -4,6 +4,11 @@ import co.com.sofka.domain.generic.Identity;
 
 public class IdEmisario extends Identity {
 
+
+    public IdEmisario () {
+    }
+
+
     public IdEmisario(String id) {
         super(id);
     }

@@ -19,7 +19,7 @@ public class EmisarioCambiado extends DomainEvent {
 
 
     public EmisarioCambiado(IdEmisario idEmisario, Nombre nombre, Telefono telefono, Correo correo) {
-        super("co.com.sofkau.entrenamiento.curso.EmisarioCreado");
+        super("co.com.sofkau.entrenamiento.heladeria.EmisarioCambiado");
         this.idEmisario = idEmisario;
         this.nombre = nombre;
         this.telefono = telefono;

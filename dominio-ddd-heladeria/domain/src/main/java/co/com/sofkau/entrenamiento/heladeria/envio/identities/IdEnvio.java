@@ -4,6 +4,10 @@ import co.com.sofka.domain.generic.Identity;
 
 public class IdEnvio extends Identity {
 
+    public IdEnvio () {
+    }
+
+
 
     public IdEnvio(String id) {
         super(id);

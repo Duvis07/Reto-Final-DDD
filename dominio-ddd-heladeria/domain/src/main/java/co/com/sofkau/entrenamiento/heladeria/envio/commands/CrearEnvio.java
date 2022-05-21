@@ -7,7 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
-public class AsignarEnvio extends Command {
+public class CrearEnvio extends Command {
 
 
     private  final Nombre nombre;
@@ -16,7 +16,7 @@ public class AsignarEnvio extends Command {
     private  final IdVehiculo idVehiculo;
 
 
-    public AsignarEnvio(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+    public CrearEnvio(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
         this.nombre = nombre;
         this.idEnvio = idEnvio;
         this.idEmisario = idEmisario;
