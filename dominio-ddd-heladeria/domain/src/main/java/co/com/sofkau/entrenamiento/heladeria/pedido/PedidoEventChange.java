@@ -26,9 +26,11 @@ public class PedidoEventChange extends EventChange {
 
         apply((PedidoCreado event) -> {
             pedido.idPedido = event.IdPedido();
-            pedido.nombre = event.Nombre();
+            pedido.fecha = event.Fecha();
             pedido.descripcion = event.Descripcion();
             pedido.cliente = event.Cliente();
+
+
         });
 
         apply((ProductoAñadido event) -> {

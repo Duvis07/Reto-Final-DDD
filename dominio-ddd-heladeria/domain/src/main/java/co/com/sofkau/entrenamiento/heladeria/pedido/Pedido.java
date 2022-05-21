@@ -7,21 +7,17 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Cliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Entrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Producto;
-import co.com.sofkau.entrenamiento.heladeria.pedido.events.ClienteAsignado;
-import co.com.sofkau.entrenamiento.heladeria.pedido.events.EntregaAsignada;
-import co.com.sofkau.entrenamiento.heladeria.pedido.events.PedidoCreado;
-import co.com.sofkau.entrenamiento.heladeria.pedido.events.ProductoBorrado;
+import co.com.sofkau.entrenamiento.heladeria.pedido.events.*;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdCliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdProducto;
-import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
-import co.com.sofkau.entrenamiento.heladeria.pedido.values.NombreProducto;
-import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.*;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Agregado  pedido
@@ -39,6 +35,8 @@ public class Pedido extends AggregateEvent<IdPedido> {
 
     protected Nombre nombre;
 
+    protected Fecha fecha;
+
     protected List<Producto> producto;
 
     protected Descripcion descripcion;
@@ -47,9 +45,15 @@ public class Pedido extends AggregateEvent<IdPedido> {
 
     protected Entrega entrega;
 
-    public Pedido(IdPedido idPedido) {
+
+    private Pedido(IdPedido idPedido) {
         super(idPedido);
-        appendChange(new PedidoCreado(idPedido, nombre, descripcion, cliente)).apply();
+        subscribe(new PedidoEventChange(this));
+    }
+
+    public Pedido(IdPedido idPedido,Fecha fecha,Descripcion descripcion,Cliente cliente) {
+        super(idPedido);
+        appendChange(new PedidoCreado(idPedido,fecha,descripcion,cliente)).apply();
     }
 
 
@@ -57,6 +61,15 @@ public class Pedido extends AggregateEvent<IdPedido> {
         var pedido = new Pedido(idPedido);
         events.forEach(pedido::applyEvent);
         return pedido;
+    }
+
+    public void añadirProducto(IdPedido idPedido, IdProducto idProducto, Nombre nombre, Sabor sabor, Cantidad cantidad){
+        Objects.requireNonNull(idPedido);
+        Objects.requireNonNull(idProducto);
+        Objects.requireNonNull(nombre);
+        Objects.requireNonNull(sabor);
+        Objects.requireNonNull(cantidad);
+        appendChange(new ProductoAñadido(idPedido,idProducto,nombre,sabor,cantidad)).apply();
     }
 
 
