@@ -1,4 +1,4 @@
-package heladeriausecasetest;
+package heladeriaUseCaseTest;
 
 
 import co.com.sofka.business.generic.UseCaseHandler;
