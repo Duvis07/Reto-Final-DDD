@@ -6,8 +6,12 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.AñadirMesero;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirMeseroUseCase extends UseCase<RequestCommand<AñadirMesero>, ResponseEvents> {
-
 
     @Override
     public void executeUseCase(RequestCommand<AñadirMesero> añadirMeseroRequestCommand) {

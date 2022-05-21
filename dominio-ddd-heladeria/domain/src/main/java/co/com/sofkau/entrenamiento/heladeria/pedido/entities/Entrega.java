@@ -9,6 +9,11 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Entrega extends Entity<IdEntrega> {
 
     protected NombreProducto nombreProducto;

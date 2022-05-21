@@ -8,13 +8,19 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
+
 public class Emisario extends Entity<IdEmisario> {
 
-    protected  Nombre nombre;
+    protected Nombre nombre;
 
-   protected Telefono telefono;
+    protected Telefono telefono;
 
-    protected  Correo correo;
+    protected Correo correo;
 
 
     public Emisario(IdEmisario idEmisario, Nombre nombre, Telefono telefono, Correo correo) {
@@ -40,10 +46,12 @@ public class Emisario extends Entity<IdEmisario> {
     public void cambiarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
+
     public void cambiarTelefono(Telefono telefono) {
         this.telefono = Objects.requireNonNull(telefono);
     }
+
     public void cambiarCorreo(Correo correo) {
-        this.correo= Objects.requireNonNull(correo);
+        this.correo = Objects.requireNonNull(correo);
     }
 }

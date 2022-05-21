@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdProveedor;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class ProveedorAsignado extends DomainEvent {
 
     private final IdProveedor idProveedor;
@@ -18,8 +23,6 @@ public class ProveedorAsignado extends DomainEvent {
     private final Correo correo;
 
     private final Telefono telefono;
-
-
 
 
     public ProveedorAsignado(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Correo correo, Telefono telefono) {

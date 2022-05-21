@@ -24,7 +24,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 import static org.mockito.Mockito.when;
+
 @ExtendWith(MockitoExtension.class)
 public class CambiarEmisarioUseCaseTest {
 
@@ -36,8 +42,8 @@ public class CambiarEmisarioUseCaseTest {
     private CambiarEmisarioUseCase useCase;
 
     @Test
-    void actualizarEmisario(){
-        var event = new EmisarioCambiado(new IdEnvio("2"), IdEmisario.of("1"), new  Nombre("carlos"), new Telefono(12345),new Correo( "marito"));
+    void actualizarEmisario() {
+        var event = new EmisarioCambiado(new IdEnvio("2"), IdEmisario.of("1"), new Nombre("carlos"), new Telefono(12345), new Correo("marito"));
         when(repository.getEventsBy("2")).thenReturn(history());
         useCase.addRepository(repository);
         var events = UseCaseHandler.getInstance()
@@ -45,18 +51,18 @@ public class CambiarEmisarioUseCaseTest {
                 .orElseThrow()
                 .getDomainEvents();
 
-        var emisarioCambiado = (EmisarioCambiado)events.get(0);
-        Assertions.assertEquals("1",emisarioCambiado.IdEmisario().value());
+        var emisarioCambiado = (EmisarioCambiado) events.get(0);
+        Assertions.assertEquals("1", emisarioCambiado.IdEmisario().value());
     }
 
     private List<DomainEvent> history() {
-       var  idEnvio = new  IdEnvio("2");
+        var idEnvio = new IdEnvio("2");
         var idHeladeria = new IdHeladeria("2");
         var nombre = new Nombre("inter");
         var descripcion = new Descripcion("Medellin");
-        var envioCreado= new EnvioCreado(idEnvio,idHeladeria,nombre,descripcion);
-         envioCreado.setAggregateRootId("2");
-        return List.of(envioCreado );
+        var envioCreado = new EnvioCreado(idEnvio, idHeladeria, nombre, descripcion);
+        envioCreado.setAggregateRootId("2");
+        return List.of(envioCreado);
     }
 
 }

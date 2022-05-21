@@ -24,6 +24,11 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarProveedorUseCaseTest {
 
     private AsignarProveedorUseCase asignarProveedorUseCase;
@@ -48,7 +53,7 @@ public class AsignarProveedorUseCaseTest {
                 new Nombre("Mario"),
                 new Correo("mario@gmail.com"),
                 new Telefono(30452213));
-                when(repository.getEventsBy("21")).thenReturn(events());
+        when(repository.getEventsBy("21")).thenReturn(events());
 
         //Act
         var response = UseCaseHandler

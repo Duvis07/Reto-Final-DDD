@@ -8,13 +8,18 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Ciudad;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Direccion;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class RutaAñadida extends DomainEvent {
 
     private final IdEnvio idEnvio;
     private final IdRuta idRuta;
-    private  final Direccion direccion;
-    private  final Ciudad ciudad;
-    private  final Nombre nombre;
+    private final Direccion direccion;
+    private final Ciudad ciudad;
+    private final Nombre nombre;
 
     public RutaAñadida(IdEnvio idEnvio, IdRuta idRuta, Direccion direccion, Ciudad ciudad, Nombre nombre) {
         super("co.com.sofkau.entrenamiento.heladeria.RutaAñadida");
@@ -28,6 +33,7 @@ public class RutaAñadida extends DomainEvent {
     public IdEnvio IdEnvio() {
         return idEnvio;
     }
+
     public IdRuta IdRuta() {
         return idRuta;
     }

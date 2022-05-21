@@ -5,7 +5,11 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.commands.AñadirVehiculo;
-
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 
 public class AñadirVehiculoUseCase extends UseCase<RequestCommand<AñadirVehiculo>, ResponseEvents> {
 

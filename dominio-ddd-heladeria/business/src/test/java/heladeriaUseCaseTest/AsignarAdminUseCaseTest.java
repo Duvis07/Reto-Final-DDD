@@ -25,6 +25,11 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarAdminUseCaseTest {
 
     private AsignarAdminUseCase asignarAdminUseCase;
@@ -33,7 +38,7 @@ public class AsignarAdminUseCaseTest {
     private DomainEventRepository repository;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         asignarAdminUseCase = new AsignarAdminUseCase();
         repository = mock(DomainEventRepository.class);
         asignarAdminUseCase.addRepository(repository);
@@ -67,7 +72,8 @@ public class AsignarAdminUseCaseTest {
         Assertions.assertEquals("mario@gmail.com", adminAsignado.Correo().value());
 
     }
-    private List<DomainEvent> events(){
+
+    private List<DomainEvent> events() {
         return List.of(new HeladeriaCreada(
                 IdHeladeria.of("41"),
                 new Nombre("Rincon de las delicias"),
@@ -75,9 +81,6 @@ public class AsignarAdminUseCaseTest {
                 new Ubicacion("Medellin")
         ));
     }
-
-
-
 
 
 }

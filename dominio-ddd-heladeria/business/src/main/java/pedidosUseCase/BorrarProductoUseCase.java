@@ -6,8 +6,12 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.pedido.Pedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.commands.BorrarProducto;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class BorrarProductoUseCase extends UseCase<RequestCommand<BorrarProducto>, ResponseEvents> {
-
 
     @Override
     public void executeUseCase(RequestCommand<BorrarProducto> borrarProductoRequestCommand) {

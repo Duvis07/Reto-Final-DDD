@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Ciudad;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Direccion;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirRuta extends Command {
 
     private final IdEnvio idEnvio;

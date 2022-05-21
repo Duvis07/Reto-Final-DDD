@@ -31,6 +31,11 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarEntregaCaseUseTest {
     private AsignarEntregaUseCase asignarEntregaUseCase;
 
@@ -74,7 +79,7 @@ public class AsignarEntregaCaseUseTest {
 
     }
 
-    private List<DomainEvent> events(){
+    private List<DomainEvent> events() {
         return List.of(new PedidoCreado(
                 IdPedido.of("21"),
                 new Fecha(1, 10, 2021),

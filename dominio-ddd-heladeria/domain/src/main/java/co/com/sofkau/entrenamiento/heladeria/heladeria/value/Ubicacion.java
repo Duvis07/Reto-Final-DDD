@@ -4,6 +4,11 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Ubicacion implements ValueObject<String> {
     private final String value;
 
@@ -23,7 +28,6 @@ public class Ubicacion implements ValueObject<String> {
     public static Ubicacion of(String ubicacion) {
         return new Ubicacion(ubicacion);
     }
-
 
 
     @Override

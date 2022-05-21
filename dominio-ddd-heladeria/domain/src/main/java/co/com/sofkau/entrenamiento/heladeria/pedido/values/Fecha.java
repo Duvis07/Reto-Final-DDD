@@ -6,6 +6,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Fecha implements ValueObject<String> {
 
     private final LocalDate date;
@@ -13,11 +18,11 @@ public class Fecha implements ValueObject<String> {
 
     public Fecha(int day, int month, int year) {
 
-        date = LocalDate.of(year,month,day);
+        date = LocalDate.of(year, month, day);
         value = generarFormato();
     }
 
-    private String generarFormato(){
+    private String generarFormato() {
         return date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
     }
 

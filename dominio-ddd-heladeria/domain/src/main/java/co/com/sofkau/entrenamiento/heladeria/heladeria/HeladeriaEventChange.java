@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.events.*;
 
 import java.util.ArrayList;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class HeladeriaEventChange extends EventChange {
     public HeladeriaEventChange(Heladeria heladeria) {
         apply((HeladeriaCreada event) -> {
@@ -23,7 +28,7 @@ public class HeladeriaEventChange extends EventChange {
         });
 
         apply((ProveedorAsignado event) -> {
-            heladeria.proveedor = new Proveedor(event.IdProveedor(),event.IdHeladeria(), event.Nombre(), event.Telefono(), event.Correo());
+            heladeria.proveedor = new Proveedor(event.IdProveedor(), event.IdHeladeria(), event.Nombre(), event.Telefono(), event.Correo());
         });
 
         apply((MeseroAñadido event) -> {

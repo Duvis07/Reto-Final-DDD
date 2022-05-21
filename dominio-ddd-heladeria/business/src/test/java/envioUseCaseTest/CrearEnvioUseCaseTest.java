@@ -22,6 +22,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CrearEnvioUseCaseTest {
 
     private CrearEnvioUseCase crearEnvioUseCase;
@@ -46,7 +51,7 @@ public class CrearEnvioUseCaseTest {
                 .orElseThrow();
         List<DomainEvent> events = response.getDomainEvents();
         EnvioCreado envioCreado = (EnvioCreado) events.get(0);
-        Assertions.assertEquals("2",envioCreado.IdHeladeria().value());
+        Assertions.assertEquals("2", envioCreado.IdHeladeria().value());
         Assertions.assertEquals("inter", envioCreado.Nombre().value());
         Assertions.assertEquals("Medellin", envioCreado.Descripcion().value());
     }

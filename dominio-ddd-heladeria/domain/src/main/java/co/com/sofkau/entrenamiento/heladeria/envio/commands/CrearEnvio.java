@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CrearEnvio extends Command {
 
 

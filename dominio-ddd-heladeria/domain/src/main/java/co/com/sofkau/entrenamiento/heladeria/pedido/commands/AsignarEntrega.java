@@ -9,13 +9,18 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 
 import java.time.LocalDate;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarEntrega extends Command {
 
     private final IdEntrega idEntrega;
 
     private final IdPedido idPedido;
 
-    private final NombreProducto  nombreProducto;
+    private final NombreProducto nombreProducto;
 
     private final Precio precio;
 

@@ -6,6 +6,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.CambiarNombreHeladeria;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CambiarNombreHeladeriaUseCase extends UseCase<RequestCommand<CambiarNombreHeladeria>, ResponseEvents> {
 
     @Override

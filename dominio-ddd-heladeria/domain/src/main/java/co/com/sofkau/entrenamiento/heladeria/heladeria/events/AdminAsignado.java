@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdAdministrador;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdProveedor;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AdminAsignado extends DomainEvent {
 
     private final IdAdministrador idAdministrador;

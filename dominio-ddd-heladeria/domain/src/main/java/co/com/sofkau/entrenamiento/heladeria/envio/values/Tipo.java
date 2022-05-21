@@ -4,6 +4,11 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Tipo implements ValueObject<String> {
 
     private final String value;
@@ -19,6 +24,7 @@ public class Tipo implements ValueObject<String> {
             throw new IllegalArgumentException("El tipo no permite mas de 100  caracteres");
         }
     }
+
     public static Tipo of(String tipo) {
         return new Tipo(tipo);
     }
@@ -27,7 +33,7 @@ public class Tipo implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-       Tipo tipo = (Tipo) o;
+        Tipo tipo = (Tipo) o;
         return value == tipo.value;
     }
 

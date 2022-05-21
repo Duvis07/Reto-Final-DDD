@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdMesero;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Edad;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Sexo;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class MeseroAñadido extends DomainEvent {
     private final IdMesero idMesero;
 

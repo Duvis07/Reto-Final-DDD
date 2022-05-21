@@ -23,6 +23,12 @@ import org.mockito.Mock;
 
 import java.util.List;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
+
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -46,7 +52,7 @@ public class EliminarRutaUseCaseTest {
         var command = new EliminarRuta(
                 IdEnvio.of("4"),
                 new IdRuta("4"));
-                when(repository.getEventsBy("4")).thenReturn(events());
+        when(repository.getEventsBy("4")).thenReturn(events());
 
         var response = UseCaseHandler
                 .getInstance()
@@ -56,11 +62,11 @@ public class EliminarRutaUseCaseTest {
 
         var events = response.getDomainEvents();
 
-        RutaEliminada rutaEliminada= (RutaEliminada) events.get(0);
+        RutaEliminada rutaEliminada = (RutaEliminada) events.get(0);
         Assertions.assertEquals("4", rutaEliminada.IdRuta().value());
     }
 
-    private List<DomainEvent> events(){
+    private List<DomainEvent> events() {
         return List.of(new EnvioCreado(
                 IdEnvio.of("21"),
                 new IdHeladeria("11"),

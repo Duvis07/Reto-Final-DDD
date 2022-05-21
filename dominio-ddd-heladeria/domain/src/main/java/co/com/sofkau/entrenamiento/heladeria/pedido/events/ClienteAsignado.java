@@ -6,12 +6,17 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdCliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class ClienteAsignado extends DomainEvent {
 
 
     private final IdCliente idCliente;
 
-    private  final  IdPedido idPedido;
+    private final IdPedido idPedido;
     private final Nombre nombre;
 
     private final Telefono telefono;

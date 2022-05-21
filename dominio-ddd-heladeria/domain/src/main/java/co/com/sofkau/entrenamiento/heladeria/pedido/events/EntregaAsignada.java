@@ -9,6 +9,11 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 
 import java.time.LocalDate;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class EntregaAsignada extends DomainEvent {
     private final IdEntrega idEntrega;
 
@@ -28,7 +33,6 @@ public class EntregaAsignada extends DomainEvent {
         this.nombreProducto = nombreProducto;
         this.precio = precio;
         this.fecha = fecha;
-
 
 
     }

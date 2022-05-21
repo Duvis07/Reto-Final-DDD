@@ -23,6 +23,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Heladeria extends AggregateEvent<IdHeladeria> {
 
 
@@ -59,43 +64,43 @@ public class Heladeria extends AggregateEvent<IdHeladeria> {
         return heladeria;
     }
 
-    public void asignarAdmin(IdAdministrador idAdministrador, Nombre nombre, Telefono telefono, Correo correo){
+    public void asignarAdmin(IdAdministrador idAdministrador, Nombre nombre, Telefono telefono, Correo correo) {
         Objects.requireNonNull(idAdministrador);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(telefono);
         Objects.requireNonNull(correo);
-        appendChange(new AdminAsignado(idAdministrador,nombre,telefono,correo)).apply();
+        appendChange(new AdminAsignado(idAdministrador, nombre, telefono, correo)).apply();
     }
 
-    public void asignarProveedor(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Correo correo,    Telefono telefono){
+    public void asignarProveedor(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Correo correo, Telefono telefono) {
         Objects.requireNonNull(idProveedor);
         Objects.requireNonNull(idHeladeria);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(correo);
-        appendChange(new ProveedorAsignado(idProveedor, idHeladeria, nombre,correo, telefono)).apply();
+        appendChange(new ProveedorAsignado(idProveedor, idHeladeria, nombre, correo, telefono)).apply();
     }
 
-    public void añadirMesero(IdMesero idMesero, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo){
+    public void añadirMesero(IdMesero idMesero, Nombre nombre, Telefono telefono, Edad edad, Sexo sexo) {
         Objects.requireNonNull(idMesero);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(telefono);
         Objects.requireNonNull(edad);
         Objects.requireNonNull(sexo);
-        appendChange(new MeseroAñadido(idMesero,nombre,telefono,edad,sexo)).apply();
+        appendChange(new MeseroAñadido(idMesero, nombre, telefono, edad, sexo)).apply();
     }
 
 
-    public void eliminarMesero(IdHeladeria idHeladeria, IdMesero idMesero){
+    public void eliminarMesero(IdHeladeria idHeladeria, IdMesero idMesero) {
         Objects.requireNonNull(idHeladeria);
         Objects.requireNonNull(idMesero);
-        appendChange(new MeseroEliminado(idHeladeria,idMesero)).apply();
+        appendChange(new MeseroEliminado(idHeladeria, idMesero)).apply();
     }
 
-    public void cambiarNombreHeladeria(IdHeladeria idHeladeria, Nombre nombre, Ubicacion ubicacion){
+    public void cambiarNombreHeladeria(IdHeladeria idHeladeria, Nombre nombre, Ubicacion ubicacion) {
         Objects.requireNonNull(idHeladeria);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(ubicacion);
-        appendChange(new NombreCambiadoHeladeria(idHeladeria,nombre,ubicacion)).apply();
+        appendChange(new NombreCambiadoHeladeria(idHeladeria, nombre, ubicacion)).apply();
     }
 
     public Nombre Nombre() {

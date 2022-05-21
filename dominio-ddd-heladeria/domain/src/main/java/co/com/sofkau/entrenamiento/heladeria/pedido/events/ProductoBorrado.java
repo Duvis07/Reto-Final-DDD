@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdProducto;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Cantidad;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Sabor;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class ProductoBorrado extends DomainEvent {
 
     private final IdProducto idProducto;
@@ -22,11 +27,9 @@ public class ProductoBorrado extends DomainEvent {
     }
 
 
-
     public IdProducto IdProducto() {
         return idProducto;
     }
-
 
 
     public IdPedido IdPedido() {

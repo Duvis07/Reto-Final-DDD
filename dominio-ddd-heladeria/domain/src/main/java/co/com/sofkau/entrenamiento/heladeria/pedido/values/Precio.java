@@ -4,8 +4,13 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Precio implements ValueObject<Double> {
-    private  final Double value;
+    private final Double value;
 
     public Precio(Double value) {
         this.value = value;

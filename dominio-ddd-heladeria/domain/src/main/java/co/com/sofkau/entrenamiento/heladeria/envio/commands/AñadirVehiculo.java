@@ -6,10 +6,15 @@ import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.*;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirVehiculo extends Command {
 
 
-    private  final IdEnvio idEnvio;
+    private final IdEnvio idEnvio;
     private final IdVehiculo idVehiculo;
 
     private final Marca marca;
@@ -47,7 +52,6 @@ public class AñadirVehiculo extends Command {
     public Tipo Tipo() {
         return tipo;
     }
-
 
 
 }

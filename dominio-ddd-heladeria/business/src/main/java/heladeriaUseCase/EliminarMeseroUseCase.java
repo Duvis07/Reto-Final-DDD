@@ -6,6 +6,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.EliminarMesero;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class EliminarMeseroUseCase extends UseCase<RequestCommand<EliminarMesero>, ResponseEvents> {
 
     @Override

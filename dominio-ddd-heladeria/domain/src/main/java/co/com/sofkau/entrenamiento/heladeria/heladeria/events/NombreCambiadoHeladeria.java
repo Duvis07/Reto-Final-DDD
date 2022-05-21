@@ -5,12 +5,16 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Ubicacion;
 
-
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class NombreCambiadoHeladeria extends DomainEvent {
 
     private final IdHeladeria idHeladeria;
 
-    private  final Nombre nombre;
+    private final Nombre nombre;
 
     private final Ubicacion ubicacion;
 

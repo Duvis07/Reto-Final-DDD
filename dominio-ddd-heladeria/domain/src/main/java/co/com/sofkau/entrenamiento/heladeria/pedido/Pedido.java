@@ -20,8 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * Agregado  pedido
- * Se hacen metodos get y set de todos sus atributos y metodo crear paquete
+ *
  *
  * @Version 1.0
  * @Author Duvan Botero

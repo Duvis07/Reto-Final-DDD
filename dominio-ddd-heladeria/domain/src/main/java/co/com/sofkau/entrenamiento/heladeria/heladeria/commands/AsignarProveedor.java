@@ -7,7 +7,12 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdProveedor;
 
-public class AsignarProveedor  extends Command {
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
+public class AsignarProveedor extends Command {
 
     private final IdProveedor idProveedor;
 
@@ -17,7 +22,7 @@ public class AsignarProveedor  extends Command {
 
     private final Correo correo;
 
-    private  final Telefono telefono;
+    private final Telefono telefono;
 
 
     public AsignarProveedor(IdProveedor idProveedor, IdHeladeria idHeladeria, Nombre nombre, Correo correo, Telefono telefono) {

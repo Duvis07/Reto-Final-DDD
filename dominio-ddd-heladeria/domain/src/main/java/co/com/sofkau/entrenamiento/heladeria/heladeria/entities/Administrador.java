@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdAdministrado
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 
 public class Administrador extends Entity<IdAdministrador> {
     protected Nombre nombre;

@@ -4,6 +4,11 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Modelo implements ValueObject<Integer> {
     private final Integer value;
 
@@ -28,7 +33,7 @@ public class Modelo implements ValueObject<Integer> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Modelo modelo= (Modelo) o;
+        Modelo modelo = (Modelo) o;
         return value == modelo.value;
     }
 

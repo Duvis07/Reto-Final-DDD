@@ -25,6 +25,11 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirMeseroUseCaseTest {
     private AñadirMeseroUseCase añadirMeseroUseCase;
 
@@ -39,7 +44,7 @@ public class AñadirMeseroUseCaseTest {
     }
 
     @Test
-    public void añadirMesa(){
+    public void añadirMesa() {
 
         //Arrange
         var command = new AñadirMesero(
@@ -48,7 +53,7 @@ public class AñadirMeseroUseCaseTest {
                 IdHeladeria.of("22"),
                 new Telefono(3216102),
                 new Edad(32),
-                 new Sexo("masculino"));
+                new Sexo("masculino"));
 
         when(repository.getEventsBy("22")).thenReturn(events());
 
@@ -69,7 +74,7 @@ public class AñadirMeseroUseCaseTest {
         Assertions.assertEquals("masculino", meseroAñadido.Sexo().value());
     }
 
-    private List<DomainEvent> events(){
+    private List<DomainEvent> events() {
         return List.of(new HeladeriaCreada(
                 IdHeladeria.of("41"),
                 new Nombre("Rincon de las delicias"),

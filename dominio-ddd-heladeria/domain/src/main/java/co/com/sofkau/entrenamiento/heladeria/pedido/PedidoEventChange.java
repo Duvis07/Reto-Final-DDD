@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
- * PedidoEventChange es el  encargado de disparar los diferentes eventos de nuestro agregado Pedido
  *
  * @Version 1.0
  * @Author Duvan Botero

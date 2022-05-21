@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Correo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CambiarEmisario extends Command {
 
 

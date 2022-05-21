@@ -6,6 +6,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdCliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarCliente extends Command {
 
 

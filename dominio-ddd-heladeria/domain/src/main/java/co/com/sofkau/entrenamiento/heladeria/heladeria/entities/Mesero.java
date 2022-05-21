@@ -9,6 +9,11 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Sexo;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Mesero extends Entity<IdMesero> {
 
     protected Nombre nombre;
@@ -46,6 +51,7 @@ public class Mesero extends Entity<IdMesero> {
     public void cambiarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
+
     public void cambiarTelefono(Telefono telefono) {
         this.telefono = Objects.requireNonNull(telefono);
     }

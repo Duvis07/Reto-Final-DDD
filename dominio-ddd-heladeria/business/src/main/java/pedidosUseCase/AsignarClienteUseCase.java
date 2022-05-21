@@ -6,6 +6,11 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.pedido.Pedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.commands.AsignarCliente;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarClienteUseCase  extends UseCase<RequestCommand<AsignarCliente>, ResponseEvents> {
     @Override
     public void executeUseCase(RequestCommand<AsignarCliente> asignarClienteRequestCommand) {

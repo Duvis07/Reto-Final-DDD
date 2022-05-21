@@ -5,6 +5,11 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Sexo implements ValueObject<String> {
     private final String value;
 
@@ -26,12 +31,11 @@ public class Sexo implements ValueObject<String> {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Sexo  sexo = (Sexo) o;
+        Sexo sexo = (Sexo) o;
         return Objects.equals(value, sexo.value);
     }
 

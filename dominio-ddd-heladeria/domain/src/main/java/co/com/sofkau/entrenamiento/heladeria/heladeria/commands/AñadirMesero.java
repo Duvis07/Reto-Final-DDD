@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdMesero;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Edad;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.value.Sexo;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirMesero extends Command {
 
     private final IdMesero idMesero;
@@ -16,6 +21,7 @@ public class AñadirMesero extends Command {
     private final Telefono telefono;
     private final Edad edad;
     private final Sexo sexo;
+
     public AñadirMesero(IdMesero idMesero, Nombre nombre, IdHeladeria idHeladeria, Telefono telefono, Edad edad, Sexo sexo) {
         this.idMesero = idMesero;
         this.nombre = nombre;

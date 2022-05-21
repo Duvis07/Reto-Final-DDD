@@ -9,19 +9,24 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Marca;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Modelo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Tipo;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class VehiculoAñadido extends DomainEvent {
 
 
     private final IdEnvio idEnvio;
     private final IdVehiculo idVehiculo;
 
-    private  final Marca marca;
+    private final Marca marca;
 
-    private  final Tipo tipo;
+    private final Tipo tipo;
 
     private final Modelo modelo;
 
-    public VehiculoAñadido(IdEnvio idEnvio , IdVehiculo idVehiculo,  Marca marca, Tipo tipo, Modelo modelo) {
+    public VehiculoAñadido(IdEnvio idEnvio, IdVehiculo idVehiculo, Marca marca, Tipo tipo, Modelo modelo) {
         super("co.com.sofkau.entrenamiento.heladeria.VehiculoAñadido");
         this.idEnvio = idEnvio;
         this.idVehiculo = idVehiculo;

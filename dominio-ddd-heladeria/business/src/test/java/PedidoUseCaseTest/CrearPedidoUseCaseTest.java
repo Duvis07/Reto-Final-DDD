@@ -24,6 +24,11 @@ import pedidosUseCase.CrearPedidoUseCase;
 
 import java.util.List;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CrearPedidoUseCaseTest {
 
     private CrearPedidoUseCase crearPedidoUseCase;
@@ -39,10 +44,10 @@ public class CrearPedidoUseCaseTest {
                 IdPedido.of("13"),
                 new Fecha(1, 10, 2021),
                 new Descripcion("conos"),
-                        new Cliente(
-                                new IdCliente("1"),
-                                new Nombre("Mariana"),
-                                new Telefono(321617879)));
+                new Cliente(
+                        new IdCliente("1"),
+                        new Nombre("Mariana"),
+                        new Telefono(321617879)));
 
         var response = UseCaseHandler
                 .getInstance()

@@ -8,6 +8,12 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.values.Sabor;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
+
 public class Producto extends Entity<IdProducto> {
 
     protected Nombre nombre;

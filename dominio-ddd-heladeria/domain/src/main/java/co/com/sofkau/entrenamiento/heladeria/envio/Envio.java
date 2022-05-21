@@ -17,14 +17,19 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Envio extends AggregateEvent<IdEnvio> {
 
-    protected  Descripcion descripcion;
+    protected Descripcion descripcion;
+
     protected IdEnvio idEnvio;
     protected Emisario emisario;
 
     protected List<Ruta> rutas;
-
 
     protected Vehiculo vehiculo;
 
@@ -38,9 +43,9 @@ public class Envio extends AggregateEvent<IdEnvio> {
         subscribe(new Enviochange(this));
     }
 
-    public Envio(IdEnvio idEnvio,  IdHeladeria idHeladeria, Nombre nombre, Descripcion descripcion) {
+    public Envio(IdEnvio idEnvio, IdHeladeria idHeladeria, Nombre nombre, Descripcion descripcion) {
         super(idEnvio);
-        appendChange(new EnvioCreado(idEnvio,idHeladeria,nombre,descripcion)).apply();
+        appendChange(new EnvioCreado(idEnvio, idHeladeria, nombre, descripcion)).apply();
     }
 
     public static Envio from(IdEnvio idEnvio, List<DomainEvent> events) {
@@ -74,8 +79,8 @@ public class Envio extends AggregateEvent<IdEnvio> {
         appendChange(new VehiculoAñadido(idEnvio, idVehiculo, marca, tipo, modelo)).apply();
     }
 
-    public void eliminarRuta(IdEnvio idEnvio,IdRuta idRuta) {
-        appendChange(new RutaEliminada(idEnvio,idRuta)).apply();
+    public void eliminarRuta(IdEnvio idEnvio, IdRuta idRuta) {
+        appendChange(new RutaEliminada(idEnvio, idRuta)).apply();
     }
 
     public IdEnvio IdEnvio() {

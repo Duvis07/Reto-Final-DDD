@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.commands.CrearEnvio;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CrearEnvioUseCase extends UseCase<RequestCommand<CrearEnvio>, ResponseEvents> {
     @Override
     public void executeUseCase(RequestCommand<CrearEnvio> crearEnvioRequestCommand) {

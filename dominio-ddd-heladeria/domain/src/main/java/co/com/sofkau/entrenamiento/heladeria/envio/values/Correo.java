@@ -4,12 +4,17 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Correo implements ValueObject<String> {
 
     private final String value;
 
     public Correo(String value) {
-        this.value = Objects.requireNonNull(value, "Correo Requerida");
+        this.value = Objects.requireNonNull(value, "Correo Requerido");
 
         if (this.value.isBlank()) {
             throw new IllegalArgumentException("El correo no puede estar en blanco");

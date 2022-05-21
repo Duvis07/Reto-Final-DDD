@@ -4,6 +4,11 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Nombre implements ValueObject<String> {
     private final String value;
 
@@ -27,7 +32,7 @@ public class Nombre implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-     Nombre nombre = (  Nombre) o;
+        Nombre nombre = (Nombre) o;
         return value == nombre.value;
     }
 

@@ -21,6 +21,11 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class CambiarNombreHeladeriaUseCaseTest {
 
     private CambiarNombreHeladeriaUseCase cambiarNombreHeladeriaUseCase;
@@ -40,7 +45,7 @@ public class CambiarNombreHeladeriaUseCaseTest {
         var command = new CambiarNombreHeladeria(
                 IdHeladeria.of("122"),
                 new Nombre("4 esquinas"),
-        new Ubicacion("Bogota")
+                new Ubicacion("Bogota")
         );
 
         when(repository.getEventsBy("122")).thenReturn(events());
@@ -56,7 +61,7 @@ public class CambiarNombreHeladeriaUseCaseTest {
         Assertions.assertEquals("Bogota", nombreHeladeriaCambiado.Ubicacion().value());
     }
 
-    private List<DomainEvent> events(){
+    private List<DomainEvent> events() {
         return List.of(new HeladeriaCreada(
                 IdHeladeria.of("41"),
                 new Nombre("deliSuper"),

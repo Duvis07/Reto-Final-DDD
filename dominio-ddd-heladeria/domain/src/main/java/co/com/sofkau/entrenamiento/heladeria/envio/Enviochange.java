@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.events.*;
 
 import java.util.ArrayList;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Enviochange extends EventChange {
 
     public Enviochange(Envio envio) {
@@ -16,12 +21,12 @@ public class Enviochange extends EventChange {
             envio.idEnvio = event.IdEnvio();
             envio.nombre = event.Nombre();
             envio.descripcion = event.Descripcion();
-            envio.rutas =new ArrayList<>();
+            envio.rutas = new ArrayList<>();
 
 
         });
         apply((RutaAñadida event) -> {
-            int numRutas =envio.rutas.size();
+            int numRutas = envio.rutas.size();
             if (numRutas == 3) {
                 throw new IllegalArgumentException("No puedes agregar más de 3 rutas");
             }
@@ -33,15 +38,15 @@ public class Enviochange extends EventChange {
         });
 
         apply((EmisarioCambiado event) -> {
-            envio.nombre= event.Nombre();
+            envio.nombre = event.Nombre();
         });
 
 
         apply((VehiculoAñadido event) -> {
-            envio.vehiculo= new Vehiculo(event.IdVehiculo(),event.IdEnvio(), event.Marca(), event.Modelo(),event.Tipo());
+            envio.vehiculo = new Vehiculo(event.IdVehiculo(), event.IdEnvio(), event.Marca(), event.Modelo(), event.Tipo());
         });
 
     }
 
-    }
+}
 

@@ -8,6 +8,11 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.commands.AsignarCliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.commands.AsignarEntrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AsignarEntregaUseCase  extends UseCase<RequestCommand<AsignarEntrega>, ResponseEvents> {
 
 

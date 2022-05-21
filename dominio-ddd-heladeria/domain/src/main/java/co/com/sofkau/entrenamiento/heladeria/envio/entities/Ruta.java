@@ -9,11 +9,16 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 
 import java.util.Objects;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class Ruta extends Entity<IdRuta> {
 
     protected Direccion direccion;
 
-    protected  Nombre nombre;
+    protected Nombre nombre;
     protected Ciudad ciudad;
 
     public Ruta(IdRuta idRuta, Direccion direccion, Nombre nombre, Ciudad ciudad) {
@@ -39,9 +44,11 @@ public class Ruta extends Entity<IdRuta> {
     public void cambiarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
+
     public void cambiarCiudad(Ciudad ciudad) {
         this.ciudad = Objects.requireNonNull(ciudad);
     }
+
     public void cambiarDireccion(Direccion direccion) {
         this.direccion = Objects.requireNonNull(direccion);
     }

@@ -7,6 +7,11 @@ import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.events.EmisarioCambiado;
 import co.com.sofkau.entrenamiento.heladeria.envio.events.RutaAñadida;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class AñadirRutaUseCase extends UseCase<TriggeredEvent<RutaAñadida>, ResponseEvents> {
     @Override
     public void executeUseCase(TriggeredEvent<RutaAñadida> rutaAñadidaTriggeredEvent) {

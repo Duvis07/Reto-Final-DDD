@@ -6,6 +6,11 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Fecha;
 
+/**
+ * @author Duvan Botero
+ * @version 1.0
+ * @email duvanarleybotero@gmail.com
+ */
 public class PedidoCreado extends DomainEvent {
 
     private final IdPedido idPedido;
