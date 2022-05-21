@@ -24,7 +24,6 @@ public class Cliente extends Entity<IdCliente> {
     }
 
 
-
     public Nombre Nombre() {
         return nombre;
     }

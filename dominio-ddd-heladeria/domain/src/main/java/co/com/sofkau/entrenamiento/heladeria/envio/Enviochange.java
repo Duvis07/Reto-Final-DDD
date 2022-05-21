@@ -13,6 +13,8 @@ public class Enviochange extends EventChange {
         apply((EnvioCreado event) -> {
             envio.idEnvio = event.IdEnvio();
             envio.nombre = event.Nombre();
+            envio.descripcion = event.Descripcion();
+
 
         });
         apply((RutaAñadida event) -> {
@@ -32,8 +34,8 @@ public class Enviochange extends EventChange {
         });
 
 
-        apply((VehiculoAsignado event) -> {
-            envio.vehiculo= new Vehiculo(event.IdVehiculo(), event.Marca(), event.Modelo(),event.Tipo());
+        apply((VehiculoAñadido event) -> {
+            envio.vehiculo= new Vehiculo(event.IdVehiculo(),event.IdEnvio(), event.Marca(), event.Modelo(),event.Tipo());
         });
 
     }

@@ -11,22 +11,26 @@ import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEnvio;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdRuta;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.*;
+import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 
 import java.util.List;
 import java.util.Objects;
 
 public class Envio extends AggregateEvent<IdEnvio> {
 
+    protected  Descripcion descripcion;
     protected IdEnvio idEnvio;
     protected Emisario emisario;
 
-    protected List <Ruta> rutas;
+    protected List<Ruta> rutas;
+
 
     protected Vehiculo vehiculo;
 
     protected Nombre nombre;
 
-    protected  Factura factura;
+    protected Factura factura;
 
 
     private Envio(IdEnvio idEnvio) {
@@ -34,42 +38,43 @@ public class Envio extends AggregateEvent<IdEnvio> {
         subscribe(new Enviochange(this));
     }
 
-    public Envio( Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+    public Envio(IdEnvio idEnvio,  IdHeladeria idHeladeria, Nombre nombre, Descripcion descripcion) {
         super(idEnvio);
-        appendChange(new EnvioCreado(nombre,  idEnvio,  idEmisario, idVehiculo)).apply();
+        appendChange(new EnvioCreado(idEnvio,idHeladeria,nombre,descripcion)).apply();
     }
 
     public static Envio from(IdEnvio idEnvio, List<DomainEvent> events) {
-        var envio= new Envio(idEnvio );
+        var envio = new Envio(idEnvio);
         events.forEach(envio::applyEvent);
         return envio;
     }
 
-    public void añadirRuta(IdRuta idRuta, Nombre nombre, Ciudad ciudad, Direccion direccion){
+    public void añadirRuta(IdRuta idRuta, Nombre nombre, Ciudad ciudad, Direccion direccion) {
         Objects.requireNonNull(idRuta);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(ciudad);
         Objects.requireNonNull(direccion);
-        appendChange(new RutaAñadida(idRuta, direccion,ciudad, nombre)).apply();
+        appendChange(new RutaAñadida(idRuta, direccion, ciudad, nombre)).apply();
 
     }
 
-    public void cambiarEmisario(IdEmisario idEmisario, Nombre nombre, Telefono telefono, Correo correo){
+    public void cambiarEmisario(IdEmisario idEmisario, Nombre nombre, Telefono telefono, Correo correo) {
         Objects.requireNonNull(idEmisario);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(telefono);
         Objects.requireNonNull(correo);
-        appendChange(new EmisarioCambiado(idEmisario,nombre,telefono,correo)).apply();
+        appendChange(new EmisarioCambiado(idEmisario, nombre, telefono, correo)).apply();
     }
 
-    public void asignarVehiculo(IdVehiculo idVehiculo,IdEmisario idEmisario, Marca marca, Tipo tipo,Modelo modelo){
+    public void añadirVehiculo(IdEnvio idEnvio, IdVehiculo idVehiculo, Marca marca, Tipo tipo, Modelo modelo) {
+        Objects.requireNonNull(idEnvio);
         Objects.requireNonNull(idVehiculo);
         Objects.requireNonNull(marca);
         Objects.requireNonNull(tipo);
-        appendChange(new VehiculoAsignado(idVehiculo, idEmisario, marca,tipo, modelo)).apply();
+        appendChange(new VehiculoAñadido(idEnvio, idVehiculo, marca, tipo, modelo)).apply();
     }
 
-    public void eliminarHelado(IdRuta idRuta){
+    public void eliminarHelado(IdRuta idRuta) {
         appendChange(new RutaEliminada(idRuta)).apply();
     }
 
@@ -87,6 +92,10 @@ public class Envio extends AggregateEvent<IdEnvio> {
 
     public Vehiculo Vehiculo() {
         return vehiculo;
+    }
+
+    public Descripcion Descripcion() {
+        return descripcion;
     }
 
     public Nombre Nombre() {

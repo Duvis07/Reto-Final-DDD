@@ -2,42 +2,44 @@ package co.com.sofkau.entrenamiento.heladeria.envio.events;
 
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEmisario;
 import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdEnvio;
-import co.com.sofkau.entrenamiento.heladeria.envio.identities.IdVehiculo;
 import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
+import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdHeladeria;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.Descripcion;
 
 public class EnvioCreado extends DomainEvent {
 
 
+    private final IdEnvio idEnvio;
 
-    private  final Nombre nombre;
-    private  final IdEnvio idEnvio;
-    private  final IdEmisario idEmisario;
-    private  final IdVehiculo idVehiculo;
+    private final IdHeladeria idHeladeria;
+
+    private final Nombre nombre;
+
+    private final Descripcion descripcion;
 
 
-    public EnvioCreado(Nombre nombre, IdEnvio idEnvio, IdEmisario idEmisario, IdVehiculo idVehiculo) {
+    public EnvioCreado(IdEnvio idEnvio, IdHeladeria idHeladeria, Nombre nombre, Descripcion descripcion) {
         super("co.com.sofkau.entrenamiento.heladeria.EnvioCreado");
-        this.nombre = nombre;
         this.idEnvio = idEnvio;
-        this.idEmisario = idEmisario;
-        this.idVehiculo = idVehiculo;
-    }
-
-    public Nombre Nombre() {
-        return nombre;
+        this.idHeladeria = idHeladeria;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
 
     public IdEnvio IdEnvio() {
         return idEnvio;
     }
 
-    public IdEmisario IdEmisario() {
-        return idEmisario;
+    public IdHeladeria IdHeladeria() {
+        return idHeladeria;
     }
 
-    public IdVehiculo IdVehiculo() {
-        return idVehiculo;
+    public Nombre Nombre() {
+        return nombre;
+    }
+
+    public Descripcion Descripcion() {
+        return descripcion;
     }
 }
