@@ -5,6 +5,9 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Cliente;
 import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Entrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.entities.Producto;
 import co.com.sofkau.entrenamiento.heladeria.pedido.events.*;
+import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
+import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.Fecha;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.NombreProducto;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 
@@ -53,8 +56,9 @@ public class PedidoEventChange extends EventChange {
 
 
         apply((EntregaAsignada event) -> {
-            pedido.entrega = new Entrega(event.IdEntrega(), event.NombreProducto(), event.Fecha(), event.Precio());
+            pedido.entrega = new Entrega(event.IdEntrega(),event.NombreProducto(),event.Fecha(),event.Precio());
         });
+
 
     }
 }

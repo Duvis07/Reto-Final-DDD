@@ -3,6 +3,7 @@ package co.com.sofkau.entrenamiento.heladeria.pedido.commands;
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.Fecha;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.NombreProducto;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 
@@ -18,14 +19,14 @@ public class AsignarEntrega extends Command {
 
     private final Precio precio;
 
-    private final LocalDate Fecha;
+    private final Fecha fecha;
 
-    public AsignarEntrega(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, LocalDate fecha) {
+    public AsignarEntrega(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, Fecha fecha) {
         this.idEntrega = idEntrega;
         this.idPedido = idPedido;
         this.nombreProducto = nombreProducto;
         this.precio = precio;
-        Fecha = fecha;
+        this.fecha = fecha;
     }
 
     public IdEntrega IdEntrega() {
@@ -45,7 +46,7 @@ public class AsignarEntrega extends Command {
         return precio;
     }
 
-    public LocalDate Fecha() {
-        return Fecha;
+    public Fecha Fecha() {
+        return fecha;
     }
 }

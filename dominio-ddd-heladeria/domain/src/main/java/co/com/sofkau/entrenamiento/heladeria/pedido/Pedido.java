@@ -77,7 +77,7 @@ public class Pedido extends AggregateEvent<IdPedido> {
         appendChange(new ClienteAsignado(idCliente, idPedido, nombre, telefono)).apply();
     }
 
-    public void asignarEntrega(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, LocalDate fecha) {
+    public void asignarEntrega(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, Fecha fecha) {
         appendChange(new EntregaAsignada(idEntrega, idPedido, nombreProducto, precio, fecha)).apply();
     }
 

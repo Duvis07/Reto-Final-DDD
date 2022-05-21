@@ -70,14 +70,14 @@ public class AñadirProductoUseCaseTest {
         Assertions.assertEquals(12, productoAñadido.Cantidad().value());
     }
 
-    private List<DomainEvent> events(){
+    private List<DomainEvent> events() {
         return List.of(new PedidoCreado(
                 IdPedido.of("21"),
                 new Fecha(1, 10, 2021),
                 new Descripcion("dos helados"),
                 new Cliente(
                         new IdCliente("1"),
-                        new Nombre("Mariana"),
+                        new Nombre("duvan"),
                         new Telefono(321617879)
                 )
         ));

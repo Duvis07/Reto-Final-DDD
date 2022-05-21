@@ -3,6 +3,7 @@ package co.com.sofkau.entrenamiento.heladeria.pedido.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdPedido;
+import co.com.sofkau.entrenamiento.heladeria.pedido.values.Fecha;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.NombreProducto;
 import co.com.sofkau.entrenamiento.heladeria.pedido.values.Precio;
 
@@ -17,16 +18,17 @@ public class EntregaAsignada extends DomainEvent {
 
     private final Precio precio;
 
-    private final LocalDate Fecha;
+    private final Fecha fecha;
 
 
-    public EntregaAsignada(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, LocalDate fecha) {
+    public EntregaAsignada(IdEntrega idEntrega, IdPedido idPedido, NombreProducto nombreProducto, Precio precio, Fecha fecha) {
         super("co.com.sofkau.entrenamiento.heladeria.EntregaAsignada");
         this.idEntrega = idEntrega;
         this.idPedido = idPedido;
         this.nombreProducto = nombreProducto;
         this.precio = precio;
-        Fecha = fecha;
+        this.fecha = fecha;
+
 
 
     }
@@ -48,8 +50,8 @@ public class EntregaAsignada extends DomainEvent {
         return precio;
     }
 
-    public LocalDate Fecha() {
-        return Fecha;
+    public Fecha Fecha() {
+        return fecha;
     }
 
 
