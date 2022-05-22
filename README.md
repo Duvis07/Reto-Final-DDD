@@ -1,6 +1,6 @@
-## Reto Final
+## Reto Final DDD
 
-# dominio-ddd-Tienda de Helados
+# Dominio-ddd-Tienda de Helados
 Se plantea un modelo de dominio de una tienda de helados de la region que se desempeña en la venta 
 y envios de helados a nivel municipal. Al momento  de la abstraccion se identifican 3 contextos ventas, inventario y talento humano  
 cada uno de estos contextos son fundamentales en  esta tienda.
