@@ -4,7 +4,7 @@
 Se plantea un modelo de dominio de una tienda de helados de la region que se desempeña en la venta 
 y envios de helados a nivel municipal. Al momento  de la abstraccion se identifican 4 contextos comercial,almacenamiento, financiera y personas, 
 cada uno de estos contextos son fundamentales en dicha tienda.
-En este caso  se elige el  contexto  de ventas y se desarrolla su modelo  de dominio del  cual surgen 3 agregados heladeria, Pedido y envio, los cuales cuentan
+En este caso  se elige el  contexto comercial y se desarrolla su modelo  de dominio del  cual surgen 3 agregados heladeria, Pedido y envio, los cuales cuentan
 con sus correspondientes entidades  y objetos de valor.
 
 # Test Aprobados
