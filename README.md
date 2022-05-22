@@ -2,14 +2,10 @@
 
 # Dominio-ddd-Tienda de Helados
 Se plantea un modelo de dominio de una tienda de helados de la region que se desempeña en la venta 
-y envios de helados a nivel municipal. Al momento  de la abstraccion se identifican 3 contextos ventas, inventario y talento humano  
-cada uno de estos contextos son fundamentales en  esta tienda.
+y envios de helados a nivel municipal. Al momento  de la abstraccion se identifican 4 contextos comercial,almacenamiento, financiera y personas, 
+cada uno de estos contextos son fundamentales en dicha tienda.
 En este caso  se elige el  contexto  de ventas y se desarrolla su modelo  de dominio del  cual surgen 3 agregados heladeria, Pedido y envio, los cuales cuentan
 con sus correspondientes entidades  y objetos de valor.
-
-## Link del  diagrama del modelo dominio Heladeria
-https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
-
 
 # Test Aprobados
 
@@ -22,6 +18,10 @@ https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 #Link video presentacion del Modelo de dominio
 
 https://drive.google.com/file/d/1r95MkhjfhIGu1wCrGwUZaCHk_qG10vsx/view?usp=sharing
+
+## Link del  diagrama del modelo dominio Heladeria
+
+https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
 # Frase Motivadora
 ![image](https://user-images.githubusercontent.com/96325513/169672836-63c47b25-003e-4713-bc2c-488fb202de7b.png)
