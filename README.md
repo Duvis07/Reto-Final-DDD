@@ -7,7 +7,7 @@ cada uno de estos contextos son fundamentales en  esta tienda.
 En este caso  se elige el  contexto  de ventas y se desarrolla su modelo  de dominio del  cual surgen 3 agregados heladeria, Pedido y envio, los cuales cuentan
 con sus correspondientes entidades  y objetos de valor.
 
-## Link del  diagrama del dominio Heladeria
+## Link del  diagrama del modelo dominio Heladeria
 https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
 
@@ -19,3 +19,5 @@ https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
 ![image](https://user-images.githubusercontent.com/96325513/169662108-f70e2bd1-d90a-4041-a9a4-ffd9ef909487.png)
 
+
+![image](https://user-images.githubusercontent.com/96325513/169672836-63c47b25-003e-4713-bc2c-488fb202de7b.png)
