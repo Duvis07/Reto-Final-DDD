@@ -15,11 +15,11 @@ con sus correspondientes entidades  y objetos de valor.
 
 ![image](https://user-images.githubusercontent.com/96325513/169662108-f70e2bd1-d90a-4041-a9a4-ffd9ef909487.png)
 
-#Link video presentacion del Modelo de dominio
+# Link video presentacion del Modelo de dominio
 
 https://drive.google.com/file/d/1r95MkhjfhIGu1wCrGwUZaCHk_qG10vsx/view?usp=sharing
 
-## Link del  diagrama del modelo dominio Heladeria
+# Link del  diagrama del modelo dominio Heladeria
 
 https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
