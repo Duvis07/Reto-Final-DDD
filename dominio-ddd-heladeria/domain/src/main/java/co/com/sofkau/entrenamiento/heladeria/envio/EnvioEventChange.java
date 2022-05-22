@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * @version 1.0
  * @email duvanarleybotero@gmail.com
  */
-public class Enviochange extends EventChange {
+public class EnvioEventChange extends EventChange {
 
-    public Enviochange(Envio envio) {
+    public EnvioEventChange(Envio envio) {
 
         apply((EnvioCreado event) -> {
             envio.idEnvio = event.IdEnvio();

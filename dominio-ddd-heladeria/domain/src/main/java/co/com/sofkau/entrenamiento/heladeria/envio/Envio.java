@@ -41,7 +41,7 @@ public class Envio extends AggregateEvent<IdEnvio> {
 
     private Envio(IdEnvio idEnvio) {
         super(idEnvio);
-        subscribe(new Enviochange(this));
+        subscribe(new EnvioEventChange(this));
     }
 
     public Envio(IdEnvio idEnvio, IdHeladeria idHeladeria, Nombre nombre, Descripcion descripcion) {
