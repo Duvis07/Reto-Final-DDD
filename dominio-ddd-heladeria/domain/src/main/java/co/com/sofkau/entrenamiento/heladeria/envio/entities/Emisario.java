@@ -9,6 +9,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Telefono;
 import java.util.Objects;
 
 /**
+ * entidad emisario con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

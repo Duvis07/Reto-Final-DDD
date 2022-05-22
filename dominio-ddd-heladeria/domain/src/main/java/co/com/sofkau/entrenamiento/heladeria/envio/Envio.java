@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * agregado envio con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

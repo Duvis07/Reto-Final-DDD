@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
+ * se crea entidad cliente con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

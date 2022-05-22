@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.Pedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.commands.AsignarCliente;
 
 /**
+ * se crea caso de uso asignar cliente
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

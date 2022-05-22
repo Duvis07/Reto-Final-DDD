@@ -10,6 +10,7 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdProveedor;
 import java.util.Objects;
 
 /**
+ * entidad proveedor con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

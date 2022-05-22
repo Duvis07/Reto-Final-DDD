@@ -9,6 +9,7 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.Pedido;
 import co.com.sofkau.entrenamiento.heladeria.pedido.commands.CrearPedido;
 
 /**
+ * se crea caso de uso crear pedido
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

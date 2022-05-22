@@ -8,6 +8,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.events.EmisarioCambiado;
 import co.com.sofkau.entrenamiento.heladeria.envio.events.RutaAñadida;
 
 /**
+ * Se crea caso de uso añadir ruta
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

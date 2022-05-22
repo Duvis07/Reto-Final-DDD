@@ -8,6 +8,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.commands.CrearEnvio;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 
 /**
+ * Se crea caso de uso crear envio
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

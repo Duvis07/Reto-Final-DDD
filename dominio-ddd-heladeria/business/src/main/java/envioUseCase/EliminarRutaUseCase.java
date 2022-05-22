@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.commands.EliminarRuta;
 
 /**
+ * se crea caso de uso eliminar ruta
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

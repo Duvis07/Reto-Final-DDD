@@ -20,8 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- *
- *
+ *Se crea agregado con sus comportamientos y objetos de valor
  * @Version 1.0
  * @Author Duvan Botero
  * @Email duvanarleybotero@gmail.com

@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.AsignarAdmin;
 
 /**
+ * se crea caso de uso asignar administrador
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

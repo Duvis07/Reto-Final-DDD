@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.CambiarNombreHeladeria;
 
 /**
+ * se crea caso de uso cambiar nombre heladeria
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.events.EmisarioCambiado;
 
 /**
+ * Se crea caso de uso cambiar emisario
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

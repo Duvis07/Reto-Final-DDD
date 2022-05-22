@@ -9,6 +9,7 @@ import co.com.sofkau.entrenamiento.heladeria.pedido.commands.AsignarEntrega;
 import co.com.sofkau.entrenamiento.heladeria.pedido.identities.IdEntrega;
 
 /**
+ * se crea caso de uso asignar entrega
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

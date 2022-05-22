@@ -9,6 +9,7 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.identities.IdAdministrado
 import java.util.Objects;
 
 /**
+ * entidad administrador con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

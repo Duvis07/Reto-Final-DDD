@@ -10,6 +10,7 @@ import co.com.sofkau.entrenamiento.heladeria.envio.values.Nombre;
 import java.util.Objects;
 
 /**
+ * entidad ruta con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

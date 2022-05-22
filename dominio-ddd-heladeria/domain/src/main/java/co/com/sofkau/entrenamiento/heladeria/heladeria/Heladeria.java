@@ -24,6 +24,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
+ * se crea agregado heladeria con sus comportamientos y objetos de valor
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

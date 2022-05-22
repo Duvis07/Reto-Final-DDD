@@ -7,6 +7,7 @@ import co.com.sofkau.entrenamiento.heladeria.heladeria.Heladeria;
 import co.com.sofkau.entrenamiento.heladeria.heladeria.commands.AñadirMesero;
 
 /**
+ * se crea caso de uso añadir mesero
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com

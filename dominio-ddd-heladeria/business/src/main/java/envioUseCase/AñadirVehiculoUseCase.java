@@ -6,6 +6,7 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofkau.entrenamiento.heladeria.envio.Envio;
 import co.com.sofkau.entrenamiento.heladeria.envio.commands.AñadirVehiculo;
 /**
+ * Se crea caso de uso añadir vehiculo
  * @author Duvan Botero
  * @version 1.0
  * @email duvanarleybotero@gmail.com
