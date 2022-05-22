@@ -27,8 +27,7 @@ import java.util.Objects;
  * *
  */
 public class Pedido extends AggregateEvent<IdPedido> {
-
-
+    
     protected IdPedido idPedido;
 
     protected Nombre nombre;
