@@ -25,3 +25,7 @@ https://app.diagrams.net/#G1-GJNj-8d_Qy8IrcYTbmZNlSSwhKHuP0P
 
 # Frase Motivadora
 ![image](https://user-images.githubusercontent.com/96325513/169672836-63c47b25-003e-4713-bc2c-488fb202de7b.png)
+
+# Nota: Tener en cuenta que se tenian 10 casos de uso con sus correspondientes test para la fecha 20/05/2022,(revisar commit)
+el dia de hoy solo se terminaron los 2 ultimos casos de uso y se genero documentacion, ademas se crearon 4 casos de uso mas de lo requerido 
+en el  reto y por ultimo se creo un video explicativo sobre el modelo de dominio.
